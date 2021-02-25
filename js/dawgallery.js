@@ -8,11 +8,11 @@ $(document).ready(function(){
             $("#thumbs").append("<li><img src=\"images/thumbs/" + files[line] + "\"></li>");
         }
 
-        initThumbs();
-        botoneraDetail();
+
     });
 
-
+    initThumbs();
+    botoneraDetail();
 });
 
 
@@ -36,6 +36,8 @@ function initThumbs(){
         $("h1.imgname").html(nameimg);
         $("#thumbs .selected").removeClass("selected");
         $(this).addClass("selected");
+        $("#picture img").attr('src','images/img800/' +
+            nameimg);
         $("#picture").show();
     });
 }
