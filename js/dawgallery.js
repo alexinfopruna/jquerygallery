@@ -1,4 +1,20 @@
-$(document).ready(function(){
+$.fn.alexgallery = function(){
+
+    this.append('<ul id="thumbs">\n' +
+        '\n' +
+        '</ul>\n' +
+        '\n' +
+        '<div id="picture" class="modal ">\n' +
+        '  <img src="" class="center">\n' +
+        '\n' +
+        '  <div class="center">\n' +
+        '    <a href="dd" class="gallery-button-prev btn btn-success" >prev</a>\n' +
+        '    <a href="" class="gallery-button-next btn btn-success" >next</a>\n' +
+        '\n' +
+        '\n' +
+        '    <a href="" class="gallery-button-close btn btn-danger">X</a>\n' +
+        '  </div>\n' +
+        '</div>');
 
     $.get("images/images.php.txt",function(data, status){
 
@@ -13,7 +29,7 @@ $(document).ready(function(){
 
     initThumbs();
     botoneraDetail();
-});
+};
 
 
 function initThumbs(){
